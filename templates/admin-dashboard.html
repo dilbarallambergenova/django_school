@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>IT School - Admin Panel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #34495e;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 80px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #2a80b9;
+    }
+
+    .main-content {
+      margin-left: 220px;
+      padding: 30px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>IT School - Admin Panel</header>
+
+  <div class="sidebar">
+    <a href="#">🏫 Bosh Sahifa</a>
+    <a href="{% url 'subjects' %}">📚 Fanlar</a>
+    <a href="#">👨‍🎓 O‘quvchilar</a>
+    <a href="#">🏫 Xonalar</a>
+    <a href="#">📅 Dars Jadvali</a>
+    <a href="#">👩‍🏫 O‘qituvchilar</a>
+    <a href="#">📝 Davomat</a>
+    <a href="#">🧪 Imtihonlar</a>
+    <a href="#">📂 Fan Resurslari</a>
+  </div>
+
+  <div class="main-content">
+    <h2>Xush kelibsiz, Administrator!</h2>
+    <p>Quyidagi bo‘limlar orqali tizimni boshqarishingiz mumkin:</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Fanlar</h3>
+        <p>Maktabdagi barcha fanlarni boshqaring</p>
+      </div>
+      <div class="card">
+        <h3>O‘quvchilar</h3>
+        <p>Yangi o‘quvchi qo‘shish, o‘chirish yoki tahrirlash</p>
+      </div>
+      <div class="card">
+        <h3>Xonalar</h3>
+        <p>Sinf xonalarini belgilash va boshqarish</p>
+      </div>
+      <div class="card">
+        <h3>Dars Jadvali</h3>
+        <p>Haftalik dars jadvalini tuzing</p>
+      </div>
+      <div class="card">
+        <h3>O‘qituvchilar</h3>
+        <p>O‘qituvchilar ro‘yxati va ma’lumotlari</p>
+      </div>
+      <div class="card">
+        <h3>Davomat</h3>
+        <p>O‘quvchilarning kelgan-kelmaganini kuzatish</p>
+      </div>
+      <div class="card">
+        <h3>Imtihonlar</h3>
+        <p>Testlar va baholash tizimi</p>
+      </div>
+      <div class="card">
+        <h3>Fan Resurslari</h3>
+        <p>Elektron kitoblar, fayllar va qo‘shimchalar</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
